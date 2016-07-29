@@ -12,7 +12,7 @@ public class GerarDataBase {
 		prop.put("hibernate.hbm2ddl.auto", "update");
 
 		try {
-			EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa-hibernate-mysql", prop);
+			EntityManagerFactory emf = Persistence.createEntityManagerFactory("evento", prop);
 			EntityManager em = emf.createEntityManager();
 			em.close();
 			emf.close();

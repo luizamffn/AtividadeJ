@@ -20,7 +20,7 @@ public class Participante {
 
 	}
 
-	public Participante(int id, String cpf, String nome, String fone, String perfil) {
+	public Participante(String cpf, String nome, String fone, String perfil) {
 		this.cpf = cpf;
 		this.nome = nome;
 		this.fone = fone;

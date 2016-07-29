@@ -4,9 +4,11 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
 import br.ifpi.dao.GenericDAO;
+import br.ifpi.dao.JPAUtil;
 
 public class GenericDAOImpl<T> implements GenericDAO<T> {
 	private EntityManager em;
@@ -18,6 +20,7 @@ public class GenericDAOImpl<T> implements GenericDAO<T> {
 	
 	@Override
 	public T save(T objeto) {
+		em = JPAUtil.getCurrentEntityManager();
 		em.getTransaction().begin();
 		T mergedObj = em.merge(objeto);
 		em.getTransaction().commit();

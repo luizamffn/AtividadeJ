@@ -5,7 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public class JPAUtil {
-	private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa-hibernate-mysql");
+	private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("evento");
 
 	private static ThreadLocal<EntityManager> ems = new ThreadLocal<EntityManager>();
 
